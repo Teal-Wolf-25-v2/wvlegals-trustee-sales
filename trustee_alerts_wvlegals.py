@@ -295,7 +295,7 @@ def scrape_notices():
 
             for county in TARGET_COUNTIES:
                 county_regex = re.search(county,article_text_county,re.IGNORECASE)
-                if county_regex:
+                if county_regex.group(0) == county:
                     sale_info = extract_sale_info(article_text,county,detail_url,mini_article_text)
                     sale_info["Detail URL"] = detail_url
                     if sale_info["Location"] == TARGET_COUNTIES[0] and sale_info["Sale Date/Time"] == "" and sale_info["Address"] == "" and sale_info["Grantor/Borrower"] == "" and sale_info["Deposit/Amount"] == "" and sale_info["Original Deed Date"] == "":
