@@ -1,0 +1,8 @@
+{
+    "counties":["Logan", "Boone", "Mingo", "Lincoln", "Kanawha", "Putnam", "Cabell", "Wayne"],
+    "search":"trustee",
+    "pages":10,
+    "url":"https://wvlegals.com",
+    "send_time":"22:00",
+    "debug":true
+}
