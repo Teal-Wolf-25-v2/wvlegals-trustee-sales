@@ -4,7 +4,7 @@
         "binary_path": "/var/lib/pufferpanel/servers/700cca2c/.wdm/drivers/operadriver/linux64/v.138.0.7204.251/operadriver_linux64/"
     },
     "linux64_geckodriver_v0.36.0_for_143.0": {
-        "timestamp": "04/10/2025",
+        "timestamp": "05/10/2025",
         "binary_path": "/var/lib/pufferpanel/servers/700cca2c/.wdm/drivers/geckodriver/linux64/v0.36.0/geckodriver"
     }
 }

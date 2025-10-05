@@ -286,7 +286,7 @@ def scrape_notices():
                 continue
             article_text,visible_texts = get_visible_detail_text(detail_url,debug)
             article_text = visible_texts[0]
-            article_text = re.split("read more",article_text,flags=re.IGNORECASE)[0]
+            article_text_county = re.split("read more",article_text,flags=re.IGNORECASE)[0]
             if debug:
                 print(visible_texts)
             def get_last_chars(string, n):
@@ -294,7 +294,7 @@ def scrape_notices():
             mini_article_text = get_last_chars(article_text,350)
 
             for county in TARGET_COUNTIES:
-                county_regex = re.search(county,article_text,re.IGNORECASE)
+                county_regex = re.search(county,article_text_county,re.IGNORECASE)
                 if county_regex:
                     sale_info = extract_sale_info(article_text,county,detail_url,mini_article_text)
                     sale_info["Detail URL"] = detail_url
