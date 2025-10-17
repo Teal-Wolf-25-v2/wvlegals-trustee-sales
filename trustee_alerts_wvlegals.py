@@ -13,6 +13,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager as firefox
 
+time.sleep(60) # Allow Firefox to start before doing anything
+
 with open("config.json","r") as json_file:
     debug=json.load(json_file)["debug"]
 
@@ -327,7 +329,7 @@ def send():
     if __name__ == "__main__":
         excel_file, log_file = scrape_notices()
         send_email("WV Trustee Sales Report", "See attached Excel and log file.", [excel_file, log_file])
-        timestamp = datetime.now().strftime('%Y:%m:%d %H:%M:%S')
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(f"Report sent at {timestamp}.")
     time.sleep(5*60)
     os.remove(excel_file)
